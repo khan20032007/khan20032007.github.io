@@ -1,0 +1,158 @@
+/* REMOVE ALL CSS AND WRITE YOUR OWN */
+h2 {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  background: rgba(234, 234, 234, 0.02);
+}
+
+.boxes {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  background: white; /* White background */
+  padding: 30px; /* Internal space */
+  border-radius: 4px; /* Small radius */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.icons-fa {
+  display: inline-block;
+  font-size: 40px;
+  letter-spacing: 20px;
+  color: rgba(39, 111, 191, 1);
+}
+
+.profile-image-round {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.profile-image-round:hover {
+  width: 210px;
+  height: 210px;
+  transition: 0.1s;
+  animation: animated_div 5s 1;
+}
+
+@keyframes animated_div {
+  0% {
+    transform: rotate(0deg);
+    left: 0px;
+  }
+  25% {
+    transform: rotate(20deg);
+    left: 0px;
+  }
+  50% {
+    transform: rotate(0deg);
+    left: 500px;
+  }
+  55% {
+    transform: rotate(0deg);
+    left: 500px;
+  }
+  70% {
+    transform: rotate(0deg);
+    left: 500px;
+    background: #1ec7e6;
+  }
+  100% {
+    transform: rotate(-360deg);
+    left: 0px;
+  }
+}
+
+#pointless-btn {
+  background: black;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: 1s;
+}
+
+#secret {
+  color: white;
+  transition: 1s;
+}
+
+#secret:hover {
+  color: black;
+}
+
+#pointless-btn:hover {
+  background: white;
+}
+
+#pointless-btn:focus {
+  outline-color: white;
+}
+
+#btn-work {
+  background-color: rgba(39, 111, 191, 1);
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#btn-js {
+  background-color: rgb(69, 140, 27);
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#btn-work:hover {
+  background: white;
+  color: rgba(39, 111, 191, 1);
+  transition: 0.2s;
+}
+
+#work {
+  background: rgba(39, 111, 191, 0.1);
+}
+
+#work:hover {
+  background: rgba(39, 111, 191, 1);
+  color: white;
+  transition: 0.6s;
+}
+
+#fun {
+  background: rgba(255, 177, 0, 0.1);
+}
+
+#fun:hover {
+  background: rgba(255, 177, 0, 1);
+  color: white;
+  transition: 0.6s;
+}

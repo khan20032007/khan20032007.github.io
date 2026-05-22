@@ -1,158 +1,278 @@
-/* REMOVE ALL CSS AND WRITE YOUR OWN */
-h2 {
+/* ============================================
+   STILE GENERALE — Font e paragrafi
+   ============================================ */
+
+/* Font del corpo del testo */
+p {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-li {
+/* Titolo principale H1 */
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  font-size: 54px;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+
+/* Sottotitoli H2 */
+h2 {
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* ============================================
+   LAYOUT PRINCIPALE — Corpo e sfondo
+   ============================================ */
+
+/* Sfondo grigio chiarissimo per tutta la pagina */
+body {
+  background: rgba(234, 234, 234, 0.6);
+  margin: 0;
+  padding: 20px 0;
+}
+
+/* ============================================
+   SCHEDE (BOXES) — Il contenitore principale
+   ============================================ */
+
+/* Ogni sezione è una scheda bianca centrata */
+.boxes {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 12px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+/* ============================================
+   FOTO PROFILO — Rotonda con animazione
+   ============================================ */
+
+/* Immagine profilo circolare */
+.profile-image-round {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Al passaggio del mouse: leggero ingrandimento + animazione rotante */
+.profile-image-round:hover {
+  width: 212px;
+  height: 212px;
+  transition: 0.1s;
+  animation: animated_div 5s 1;
+}
+
+/* Animazione della foto profilo: rotazione e spostamento */
+@keyframes animated_div {
+  0%   { transform: rotate(0deg);    left: 0px; }
+  25%  { transform: rotate(20deg);   left: 0px; }
+  50%  { transform: rotate(0deg);    left: 500px; }
+  55%  { transform: rotate(0deg);    left: 500px; }
+  70%  { transform: rotate(0deg);    left: 500px; background: #1ec7e6; }
+  100% { transform: rotate(-360deg); left: 0px; }
+}
+
+/* Emoji bandiere nella sezione hero */
+.flags {
+  font-size: 30px;
+  margin-top: 6px;
+}
+
+/* ============================================
+   CARD FOTO — Griglia di immagini
+   ============================================ */
+
+/* Contenitore quadrato per ogni foto nella griglia */
+.picture-card {
+  width: 200px;
+  height: 200px;
+  margin: 0 10px 20px 10px;
   display: inline-block;
 }
+
+/* Card allargata per lo screenshot del sito (progetto) */
+.picture-card--wide {
+  width: 80%;
+  height: 280px;
+}
+
+/* Foto che riempie la card con angoli arrotondati */
+.fun-pic {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+/* ============================================
+   LISTE — Icone social
+   ============================================ */
 
 ul {
   list-style: none;
   padding: 0;
 }
 
-body {
-  background: rgba(234, 234, 234, 0.02);
+/* Icone social affiancate */
+li {
+  display: inline-block;
 }
 
-.boxes {
-  text-align: center;
-  width: 60%;
-  margin: 0 auto;
-  background: white; /* White background */
-  padding: 30px; /* Internal space */
-  border-radius: 4px; /* Small radius */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-  transition: 0.2s;
-}
-
-.icons-fa {
+/* Link delle icone social */
+li > a {
   display: inline-block;
   font-size: 40px;
   letter-spacing: 20px;
-  color: rgba(39, 111, 191, 1);
+  color: rgba(39, 111, 191, 1); /* Blu principale */
 }
 
-.profile-image-round {
-  object-fit: cover;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-}
-
-.profile-image-round:hover {
-  width: 210px;
-  height: 210px;
-  transition: 0.1s;
-  animation: animated_div 5s 1;
-}
-
-@keyframes animated_div {
-  0% {
-    transform: rotate(0deg);
-    left: 0px;
-  }
-  25% {
-    transform: rotate(20deg);
-    left: 0px;
-  }
-  50% {
-    transform: rotate(0deg);
-    left: 500px;
-  }
-  55% {
-    transform: rotate(0deg);
-    left: 500px;
-  }
-  70% {
-    transform: rotate(0deg);
-    left: 500px;
-    background: #1ec7e6;
-  }
-  100% {
-    transform: rotate(-360deg);
-    left: 0px;
-  }
-}
-
-#pointless-btn {
-  background: black;
-  border: 1px solid white;
-  border-radius: 4px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition: 1s;
-}
-
-#secret {
-  color: white;
-  transition: 1s;
-}
-
-#secret:hover {
+/* Icone social: diventano nere all'hover */
+li > a:hover {
   color: black;
 }
 
-#pointless-btn:hover {
-  background: white;
+/* ============================================
+   SEZIONE ABOUT (Chi sono) — Teal / verde acqua
+   ============================================ */
+
+#about {
+  background: rgba(0, 150, 136, 0.08); /* Verde acqua molto leggero */
 }
 
-#pointless-btn:focus {
-  outline-color: white;
+#about:hover {
+  background: rgba(0, 150, 136, 1); /* Verde acqua pieno all'hover */
+  color: white;
+  transition: 0.6s;
 }
 
+/* ============================================
+   SEZIONE WORK (Progetti) — Blu
+   ============================================ */
+
+#work {
+  background: rgba(39, 111, 191, 0.08); /* Blu molto leggero */
+}
+
+#work:hover {
+  background: rgba(39, 111, 191, 1); /* Blu pieno all'hover */
+  color: white;
+  transition: 0.6s;
+}
+
+/* Pulsante sezione lavori */
 #btn-work {
   background-color: rgba(39, 111, 191, 1);
   border: 1px solid white;
   border-radius: 4px;
   color: white;
   padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }
 
-#btn-js {
-  background-color: rgb(69, 140, 27);
-  border: 1px solid white;
-  border-radius: 4px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
+/* All'hover il pulsante si inverte: sfondo bianco, testo blu */
 #btn-work:hover {
   background: white;
   color: rgba(39, 111, 191, 1);
   transition: 0.2s;
 }
 
-#work {
-  background: rgba(39, 111, 191, 0.1);
-}
-
-#work:hover {
-  background: rgba(39, 111, 191, 1);
-  color: white;
-  transition: 0.6s;
-}
+/* ============================================
+   SEZIONE FUN (Vita fuori) — Arancione caldo
+   ============================================ */
 
 #fun {
-  background: rgba(255, 177, 0, 0.1);
+  background: rgba(255, 152, 0, 0.08); /* Arancione leggero */
 }
 
 #fun:hover {
-  background: rgba(255, 177, 0, 1);
+  background: rgba(255, 152, 0, 1); /* Arancione pieno all'hover */
   color: white;
   transition: 0.6s;
+}
+
+/* Pulsante sezione vita personale */
+#btn-fun {
+  background-color: rgba(255, 152, 0, 1);
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* All'hover il pulsante si inverte */
+#btn-fun:hover {
+  background: white;
+  color: rgba(255, 152, 0, 1);
+  transition: 0.2s;
+}
+
+/* ============================================
+   SEZIONE HACKER (Easter egg) — Sfondo scuro
+   ============================================ */
+
+#hacker {
+  background: #1a1a2e; /* Blu scuro quasi nero */
+  color: white;
+}
+
+/* Il testo segreto è bianco su sfondo scuro: invisibile!
+   Diventa visibile (nero) solo all'hover */
+#secret {
+  color: #1a1a2e; /* Stesso colore dello sfondo: testo nascosto */
+  transition: 1s;
+}
+
+/* Al passaggio del mouse il testo si rivela */
+#secret:hover {
+  color: white;
+}
+
+/* Link segreto — si rivela come il testo */
+a#secret {
+  color: #1a1a2e;
+}
+
+a#secret:hover {
+  color: #1ec7e6; /* Azzurro hacker */
+}
+
+/* Pulsante inutile: scuro su sfondo scuro */
+#pointless-btn {
+  background: #1a1a2e;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+/* All'hover il pulsante si mimetizza e "sparisce" */
+#pointless-btn:hover {
+  background: white;
+  color: white;
+  border-color: white;
+}
+
+#pointless-btn:focus {
+  outline-color: white;
 }
